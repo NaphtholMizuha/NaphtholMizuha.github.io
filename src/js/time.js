@@ -12,7 +12,7 @@ window.onload = function () {
         const now = new Date();
         const second =  parseInt((now - tete)/ 1000)
         const day = parseInt(second / 86400)
-        teteSecond_.innerHTML = `锑锑和萘酚贴贴已有 ${day} 天。更精确说是 ${second}秒。`
+        teteSecond_.innerHTML = `锑锑和萘酚贴贴已有 ${day} 天。更精确说是 ${second} 秒。`
 
     }
 
