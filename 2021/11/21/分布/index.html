@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="定义 设 nnn 维随机独立变量 X⃗\vec{X}X, Xi∼N(0,1)X_i \sim N(0,1)Xi​∼N(0,1) ,则称 χn2&#x3D;∑i&#x3D;1nXi2\def\sumi{\sum_{i &#x3D; 1}^n} \chi_n^2 &#x3D; \sumi X_i^2 χn2​&#x3D;i&#x3D;1∑n​Xi2​ 服从自由度为 nnn 的 χ2\chi^2χ2 分布,记为 χn2∼χ2(n)\chi_n^2 \sim \">
+  <meta name="description" content="定义设 $n$ 维随机独立变量 $\vec{X}$, $X_i \sim N(0,1)$ ,则称  \def\sumi{\sum_{i &#x3D; 1}^n} \chi_n^2 &#x3D; \sumi X_i^2服从自由度为 $n$ 的 $\chi^2$ 分布,记为 $\chi_n^2 \sim \chi^2(n)$ 性质概率密度$\chi^2 (n)$ 的概率密度是  f(y) &#x3D; \begin{cases}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="分布">
+<meta property="og:title" content="$\chi^2$ 分布">
 <meta property="og:url" content="http://example.com/2021/11/21/%E5%88%86%E5%B8%83/index.html">
 <meta property="og:site_name" content="萘酚米兹哈个人站">
-<meta property="og:description" content="定义 设 nnn 维随机独立变量 X⃗\vec{X}X, Xi∼N(0,1)X_i \sim N(0,1)Xi​∼N(0,1) ,则称 χn2&#x3D;∑i&#x3D;1nXi2\def\sumi{\sum_{i &#x3D; 1}^n} \chi_n^2 &#x3D; \sumi X_i^2 χn2​&#x3D;i&#x3D;1∑n​Xi2​ 服从自由度为 nnn 的 χ2\chi^2χ2 分布,记为 χn2∼χ2(n)\chi_n^2 \sim \">
+<meta property="og:description" content="定义设 $n$ 维随机独立变量 $\vec{X}$, $X_i \sim N(0,1)$ ,则称  \def\sumi{\sum_{i &#x3D; 1}^n} \chi_n^2 &#x3D; \sumi X_i^2服从自由度为 $n$ 的 $\chi^2$ 分布,记为 $\chi_n^2 \sim \chi^2(n)$ 性质概率密度$\chi^2 (n)$ 的概率密度是  f(y) &#x3D; \begin{cases}">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-11-21T14:06:18.000Z">
 <meta property="article:modified_time" content="2021-11-21T14:06:18.000Z">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>分布 | 萘酚米兹哈个人站</title>
+  <title>$\chi^2$ 分布 | 萘酚米兹哈个人站</title>
   
 
 
@@ -170,7 +170,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          分布
+          $\chi^2$ 分布
         </h1>
 
         <div class="post-meta">
@@ -194,18 +194,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h1>
-<p>设 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 维随机独立变量 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>X</mi><mo>⃗</mo></mover></mrow><annotation encoding="application/x-tex">\vec{X}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9663299999999999em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9663299999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.15216em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg width='0.471em' height='0.714em' style='width:0.471em' viewBox='0 0 471 714' preserveAspectRatio='xMinYMin'><path d='M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
-3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
-10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
--1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
--7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
-H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
-c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>∼</mo><mi>N</mi><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">X_i \sim N(0,1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span> ,则称</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>χ</mi><mi>n</mi><mn>2</mn></msubsup><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>X</mi><mi>i</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\def\sumi{\sum_{i = 1}^n}
-\chi_n^2 = \sumi X_i^2
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1111079999999998em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault">χ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.929066em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></span></p>
-<p>服从自由度为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>χ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\chi^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">χ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> 分布,记为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>χ</mi><mi>n</mi><mn>2</mn></msubsup><mo>∼</mo><msup><mi>χ</mi><mn>2</mn></msup><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\chi_n^2 \sim \chi^2(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault">χ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">χ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></p>
+        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>设 $n$ 维随机独立变量 $\vec{X}$, $X_i \sim N(0,1)$ ,则称</p>
+<script type="math/tex; mode=display">
+\def\sumi{\sum_{i = 1}^n}
+\chi_n^2 = \sumi X_i^2</script><p>服从自由度为 $n$ 的 $\chi^2$ 分布,记为 $\chi_n^2 \sim \chi^2(n)$</p>
+<h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="概率密度"><a href="#概率密度" class="headerlink" title="概率密度"></a>概率密度</h2><p>$\chi^2 (n)$ 的概率密度是</p>
+<script type="math/tex; mode=display">
+f(y) = \begin{cases} \displaystyle{\frac{1}{2^{n/2} \Gamma(n/2)} y^{n/2-1} \mathrm e^{-y/2}}, \quad y > 0 \\\\ 0, \quad \text{else} \end{cases}</script><h2 id="可加性"><a href="#可加性" class="headerlink" title="可加性"></a>可加性</h2><p>对于两个相互独立的随机变量  $\chi_1^2 \sim \chi^2(n_1), \chi_2^2 \sim \chi^2(n_2)$ 有:</p>
+<script type="math/tex; mode=display">
+\chi_1 + \chi_2 \sim \chi^2(n_1 + n_2)</script><h2 id="期望-amp-方差"><a href="#期望-amp-方差" class="headerlink" title="期望&amp;方差"></a>期望&amp;方差</h2><script type="math/tex; mode=display">
+\chi^2 \sim \chi^2(n) \implies \mathrm E(\chi^2) = n, \quad \mathrm D{Var}(\chi^2) = 2n</script><h2 id="分位点"><a href="#分位点" class="headerlink" title="分位点"></a>分位点</h2><p>对于给定 $\alpha \in (0,1)$,若满足</p>
+<script type="math/tex; mode=display">
+P\\{\chi^2 > \chi_\alpha^2 (n) \\} = \int_{\chi_\alpha^2(n)}^\infty f(y)\mathrm d y = \alpha</script><p>则称 $\chi_\alpha^2(n)$ 为 $\chi^2$ 分布的<strong>上$\alpha$分位点</strong></p>
+<p>教材上有 $n &lt; 40$ 条件下 $\chi^2$ 分布的上 $\alpha$ 分位点.对于 $n &gt; 40 $的情况,可以使用 R.A.Fisher 的公式</p>
+<script type="math/tex; mode=display">
+\chi_\alpha^2(n) \approx \frac{1}{2}(z_\alpha + \sqrt{2n-1})^2</script><p>其中 $z_\alpha$是标准正态分布的上 $\alpha$ 分位点</p>
 
     </div>
 
@@ -283,7 +286,7 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text"> 定义</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8"><span class="nav-number">2.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6"><span class="nav-number">2.1.</span> <span class="nav-text">概率密度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E5%8A%A0%E6%80%A7"><span class="nav-number">2.2.</span> <span class="nav-text">可加性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%9F%E6%9C%9B-amp-%E6%96%B9%E5%B7%AE"><span class="nav-number">2.3.</span> <span class="nav-text">期望&amp;方差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E4%BD%8D%E7%82%B9"><span class="nav-number">2.4.</span> <span class="nav-text">分位点</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -388,6 +391,59 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
