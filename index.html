@@ -193,21 +193,14 @@
 
       
           <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>设 $n$ 维随机独立变量 $\vec{X}$, $X_i \sim N(0,1)$ ,则称</p>
-<script type="math/tex; mode=display">
-\def\sumi{\sum_{i = 1}^n}
-\chi_n^2 = \sumi X_i^2</script><p>服从自由度为 $n$ 的 $\chi^2$ 分布,记为 $\chi_n^2 \sim \chi^2(n)$</p>
-<h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="概率密度"><a href="#概率密度" class="headerlink" title="概率密度"></a>概率密度</h2><p>$\chi^2 (n)$ 的概率密度是</p>
-<script type="math/tex; mode=display">
-f(y) = \begin{cases} \displaystyle{\frac{1}{2^{n/2} \Gamma(n/2)} y^{n/2-1} \mathrm e^{-y/2}}, \quad y > 0 \\\\ 0, \quad \text{else} \end{cases}</script><h2 id="可加性"><a href="#可加性" class="headerlink" title="可加性"></a>可加性</h2><p>对于两个相互独立的随机变量  $\chi_1^2 \sim \chi^2(n_1), \chi_2^2 \sim \chi^2(n_2)$ 有:</p>
-<script type="math/tex; mode=display">
-\chi_1 + \chi_2 \sim \chi^2(n_1 + n_2)</script><h2 id="期望-amp-方差"><a href="#期望-amp-方差" class="headerlink" title="期望&amp;方差"></a>期望&amp;方差</h2><script type="math/tex; mode=display">
-\chi^2 \sim \chi^2(n) \implies \mathrm E(\chi^2) = n, \quad \mathrm D{Var}(\chi^2) = 2n</script><h2 id="分位点"><a href="#分位点" class="headerlink" title="分位点"></a>分位点</h2><p>对于给定 $\alpha \in (0,1)$,若满足</p>
-<script type="math/tex; mode=display">
-P\\{\chi^2 > \chi_\alpha^2 (n) \\} = \int_{\chi_\alpha^2(n)}^\infty f(y)\mathrm d y = \alpha</script><p>则称 $\chi_\alpha^2(n)$ 为 $\chi^2$ 分布的<strong>上$\alpha$分位点</strong></p>
-<p>教材上有 $n &lt; 40$ 条件下 $\chi^2$ 分布的上 $\alpha$ 分位点.对于 $n &gt; 40 $的情况,可以使用 R.A.Fisher 的公式</p>
-<script type="math/tex; mode=display">
-\chi_\alpha^2(n) \approx \frac{1}{2}(z_\alpha + \sqrt{2n-1})^2</script><p>其中 $z_\alpha$是标准正态分布的上 $\alpha$ 分位点</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/21/%E5%88%86%E5%B8%83/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
