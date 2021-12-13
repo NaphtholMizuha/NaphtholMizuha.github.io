@@ -1,467 +1,77 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="定义设 $n$ 维随机独立变量 $\vec{X}$, $X_i \sim N(0,1)$ ,则称">
-<meta property="og:type" content="article">
-<meta property="og:title" content="$\chi^2$ 分布">
-<meta property="og:url" content="http://example.com/2021/12/03/chi-2-%E5%88%86%E5%B8%83/index.html">
-<meta property="og:site_name" content="萘酚米兹哈个人站">
-<meta property="og:description" content="定义设 $n$ 维随机独立变量 $\vec{X}$, $X_i \sim N(0,1)$ ,则称">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-12-03T01:21:27.000Z">
-<meta property="article:modified_time" content="2021-12-03T01:21:27.000Z">
-<meta property="article:author" content="NaphtholMizuha">
-<meta property="article:tag" content="program">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/2021/12/03/chi-2-%E5%88%86%E5%B8%83/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>$\chi^2$ 分布 | 萘酚米兹哈个人站</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">萘酚米兹哈个人站</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">不会有计院学生要学管理学吧</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/03/chi-2-%E5%88%86%E5%B8%83/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NaphtholMizuha">
-      <meta itemprop="description" content="萘酚米兹哈的个人博客,传递思想和看法.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萘酚米兹哈个人站">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          $\chi^2$ 分布
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-03 09:21:27" itemprop="dateCreated datePublished" datetime="2021-12-03T09:21:27+08:00">2021-12-03</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>设 $n$ 维随机独立变量 $\vec{X}$, $X_i \sim N(0,1)$ ,则称</p>
-<span id="more"></span>
-<p>$$<br>\def\sumi{\sum_{i = 1}^n}<br>\chi_n^2 = \sumi X_i^2<br>$$</p>
-<p>服从自由度为 $n$ 的 $\chi^2$ 分布,记为 $\chi_n^2 \sim \chi^2(n)$</p>
-<h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="概率密度"><a href="#概率密度" class="headerlink" title="概率密度"></a>概率密度</h2><p>$\chi^2 (n)$ 的概率密度是<br>$$<br>f(y) = \begin{cases} \displaystyle{\frac{1}{2^{n/2} \Gamma(n/2)} y^{n/2-1} \mathrm e^{-y/2}}, \quad y &gt; 0 \\ 0, \quad \text{else} \end{cases}<br>$$</p>
-<h2 id="可加性"><a href="#可加性" class="headerlink" title="可加性"></a>可加性</h2><p>对于两个相互独立的随机变量  $\chi_1^2 \sim \chi^2(n_1), \chi_2^2 \sim \chi^2(n_2)$ 有:<br>$$<br>\chi_1 + \chi_2 \sim \chi^2(n_1 + n_2)<br>$$</p>
-<h2 id="期望-amp-方差"><a href="#期望-amp-方差" class="headerlink" title="期望&amp;方差"></a>期望&amp;方差</h2><p>$$<br>\chi^2 \sim \chi^2(n) \implies \mathrm E(\chi^2) = n, \quad \mathrm D(\chi^2) = 2n<br>$$</p>
-<h2 id="分位点"><a href="#分位点" class="headerlink" title="分位点"></a>分位点</h2><p>对于给定 $\alpha \in (0,1)$,若满足</p>
-<p>$$<br>P\{\chi^2 &gt; \chi_\alpha^2 (n) \} = \int_{\chi_\alpha^2(n)}^\infty f(y)\mathrm d y = \alpha<br>$$</p>
-<p>则称 $\chi_\alpha^2(n)$ 为 $\chi^2$ 分布的<strong>上$\alpha$分位点</strong></p>
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>$\chi^2$ 分布 - 萘酚米兹哈个人站</title><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#8b0a50"><meta name="application-name" content="萘酚米兹哈个人站"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="msapplication-TileColor" content="#8b0a50"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="萘酚米兹哈个人站"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="定义设 $n$ 维随机独立变量 $\vec{X}$, $X_i \sim N(0,1)$ ,则称"><meta property="og:type" content="blog"><meta property="og:title" content="$\chi^2$ 分布"><meta property="og:url" content="http://example.com/2021/12/03/chi-2-%E5%88%86%E5%B8%83/"><meta property="og:site_name" content="萘酚米兹哈个人站"><meta property="og:description" content="定义设 $n$ 维随机独立变量 $\vec{X}$, $X_i \sim N(0,1)$ ,则称"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/img/og_image.png"><meta property="article:published_time" content="2021-12-03T01:21:27.000Z"><meta property="article:modified_time" content="2021-12-03T01:21:27.000Z"><meta property="article:author" content="NaphtholMizuha"><meta property="article:tag" content="program"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/12/03/chi-2-%E5%88%86%E5%B8%83/"},"headline":"$\\chi^2$ 分布","image":["http://example.com/img/og_image.png"],"datePublished":"2021-12-03T01:21:27.000Z","dateModified":"2021-12-03T01:21:27.000Z","author":{"@type":"Person","name":"NaphtholMizuha"},"publisher":{"@type":"Organization","name":"萘酚米兹哈个人站","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"定义设 $n$ 维随机独立变量 $\\vec{X}$, $X_i \\sim N(0,1)$ ,则称"}</script><link rel="canonical" href="http://example.com/2021/12/03/chi-2-%E5%88%86%E5%B8%83/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="萘酚米兹哈个人站" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/%E5%BD%92%E6%A1%A3">Archives</a><a class="navbar-item" href="/%E6%A0%87%E7%AD%BE">Tags</a><a class="navbar-item" href="/%E5%85%B3%E4%BA%8E">About</a><a class="navbar-item" href="/%E5%8F%8B%E9%93%BE">Friends</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-03T01:21:27.000Z" title="2021/12/3 上午9:21:27">2021-12-03</time>发表</span><span class="level-item"><time dateTime="2021-12-03T01:21:27.000Z" title="2021/12/3 上午9:21:27">2021-12-03</time>更新</span><span class="level-item">2 分钟读完 (大约234个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">$\chi^2$ 分布</h1><div class="content"><h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>设 $n$ 维随机独立变量 $\vec{X}$, $X_i \sim N(0,1)$ ,则称<br><span id="more"></span></p>
+<script type="math/tex; mode=display">
+\def\sumi{\sum_{i = 1}^n}
+\chi_n^2 = \sumi X_i^2</script><p>服从自由度为 $n$ 的 $\chi^2$ 分布,记为 $\chi_n^2 \sim \chi^2(n)$</p>
+<h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="概率密度"><a href="#概率密度" class="headerlink" title="概率密度"></a>概率密度</h2><p>$\chi^2 (n)$ 的概率密度是</p>
+<script type="math/tex; mode=display">
+f(y) = \begin{cases} \displaystyle{\frac{1}{2^{n/2} \Gamma(n/2)} y^{n/2-1} \mathrm e^{-y/2}}, \quad y > 0 \\\\ 0, \quad \text{else} \end{cases}</script><h2 id="可加性"><a href="#可加性" class="headerlink" title="可加性"></a>可加性</h2><p>对于两个相互独立的随机变量  $\chi_1^2 \sim \chi^2(n_1), \chi_2^2 \sim \chi^2(n_2)$ 有:</p>
+<script type="math/tex; mode=display">
+\chi_1 + \chi_2 \sim \chi^2(n_1 + n_2)</script><h2 id="期望-amp-方差"><a href="#期望-amp-方差" class="headerlink" title="期望&amp;方差"></a>期望&amp;方差</h2><script type="math/tex; mode=display">
+\chi^2 \sim \chi^2(n) \implies \mathrm E(\chi^2) = n, \quad \mathrm D(\chi^2) = 2n</script><h2 id="分位点"><a href="#分位点" class="headerlink" title="分位点"></a>分位点</h2><p>对于给定 $\alpha \in (0,1)$,若满足</p>
+<script type="math/tex; mode=display">
+P\\{\chi^2 > \chi_\alpha^2 (n) \\} = \int_{\chi_\alpha^2(n)}^\infty f(y)\mathrm d y = \alpha</script><p>则称 $\chi_\alpha^2(n)$ 为 $\chi^2$ 分布的<strong>上$\alpha$分位点</strong></p>
 <p>教材上有 $n &lt; 40$ 条件下 $\chi^2$ 分布的上 $\alpha$ 分位点.对于 $n &gt; 40 $的情况,可以使用 R.A.Fisher 的公式</p>
-<p>$$<br>\chi_\alpha^2(n) \approx \frac{1}{2}(z_\alpha + \sqrt{2n-1})^2<br>$$</p>
-<p>其中 $z_\alpha$是标准正态分布的上 $\alpha$ 分位点</p>
-
-    </div>
-
-    
-    
-    
-
-      <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2021/11/22/%E7%A7%AF%E5%88%86%E5%8F%98%E9%87%8F%E6%9B%BF%E6%8D%A2/" rel="prev" title="积分变量替换">
-      <i class="fa fa-chevron-left"></i> 积分变量替换
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/12/03/mathJax%E6%BC%94%E7%A4%BA/" rel="next" title="mathJax演示">
-      mathJax演示 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8"><span class="nav-number">2.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6"><span class="nav-number">2.1.</span> <span class="nav-text">概率密度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E5%8A%A0%E6%80%A7"><span class="nav-number">2.2.</span> <span class="nav-text">可加性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%9F%E6%9C%9B-amp-%E6%96%B9%E5%B7%AE"><span class="nav-number">2.3.</span> <span class="nav-text">期望&amp;方差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E4%BD%8D%E7%82%B9"><span class="nav-number">2.4.</span> <span class="nav-text">分位点</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">NaphtholMizuha</p>
-  <div class="site-description" itemprop="description">萘酚米兹哈的个人博客,传递思想和看法.</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">8</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">标签</span>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/NaphtholMizuha" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;NaphtholMizuha" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-  </div>
-
-
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://naphtholmizuha.top/" title="https:&#x2F;&#x2F;naphtholmizuha.top" rel="noopener" target="_blank">Title</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">NaphtholMizuha</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
-
-  
-
-</body>
-</html>
+<script type="math/tex; mode=display">
+\chi_\alpha^2(n) \approx \frac{1}{2}(z_\alpha + \sqrt{2n-1})^2</script><p>其中 $z_\alpha$是标准正态分布的上 $\alpha$ 分位点</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>$\chi^2$ 分布</p><p><a href="http://example.com/2021/12/03/chi-2-分布/">http://example.com/2021/12/03/chi-2-分布/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>NaphtholMizuha</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-12-03</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-12-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="sharethis-inline-share-buttons"></div><script src="https://naphtholmizuha.top" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/12/03/mathJax%E6%BC%94%E7%A4%BA/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">mathJax演示</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/11/22/%E7%A7%AF%E5%88%86%E5%8F%98%E9%87%8F%E6%9B%BF%E6%8D%A2/"><span class="level-item">积分变量替换</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://tva1.sinaimg.cn/large/008i3skNgy1gwzy03sxgmj30u00u0jt6.jpg" alt="萘酚米兹哈"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">萘酚米兹哈</p><p class="is-size-6 is-block">不会有CS学生要学管理学吧</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>The Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">2</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/naphtholmizuha" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/naphtholmizuha"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="QQ" href="https://facebook.com"><i class="fab fa-qq"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Bilibili" href="https://space.bilibili.com/11601237">Bilibili</a></div></div></div><!--!--><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-13T04:39:11.000Z">2021-12-13</time></p><p class="title"><a href="/2021/12/13/%E7%AC%AC%E4%BA%8C%E5%9E%8B%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86/">第二型曲面积分</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-03T01:23:07.000Z">2021-12-03</time></p><p class="title"><a href="/2021/12/03/mathJax%E6%BC%94%E7%A4%BA/">mathJax演示</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-03T01:21:27.000Z">2021-12-03</time></p><p class="title"><a href="/2021/12/03/chi-2-%E5%88%86%E5%B8%83/">$\chi^2$ 分布</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-22T02:29:10.000Z">2021-11-22</time></p><p class="title"><a href="/2021/11/22/%E7%A7%AF%E5%88%86%E5%8F%98%E9%87%8F%E6%9B%BF%E6%8D%A2/">积分变量替换</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-21T13:26:33.292Z">2021-11-21</time></p><p class="title"><a href="/2021/11/21/hello-world/">Hello World</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">十二月 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">十一月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90-%E5%8F%98%E9%87%8F%E6%9B%BF%E6%8D%A2/"><span class="tag">数学分析, 变量替换</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90-%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86/"><span class="tag">数学分析, 曲面积分</span><span class="tag">1</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="萘酚米兹哈个人站" height="28"></a><p class="is-size-7"><span>&copy; 2021 NaphtholMizuha</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-right",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
