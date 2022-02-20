@@ -11663,6 +11663,27 @@ figure.highlight .section {
     padding: 1.5rem 1rem;
   }
 }
+.mermaid {
+  background: transparent;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+}
+.mermaid .label {
+  font-weight: normal;
+  font-size: 0.88rem;
+}
+.mermaid .edgePath .path {
+  stroke: #02d7f2 !important;
+}
+.mermaid .arrowheadPath {
+  fill: #fff !important;
+}
+.mermaid .edgeLabel {
+  background-color: #0d1117 !important;
+  color: #fff !important;
+}
 body {
   counter-reset: card;
 }
