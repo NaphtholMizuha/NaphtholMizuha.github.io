@@ -1,6 +1,6 @@
 !function links(target, getFor ) {
         var load, loadwerror, jsonTarget, name, blogLink, imageUrl, targetTemp = target.getElementById("app-links");
-        jsonTarget = "http://naphtholmizuha.top/friends.json",
+        jsonTarget = "https://raw.githubusercontent.com/NaphtholMizuha/NaphtholMizuha.github.io/metroView/friends.json",
         name = function(e) {
             var name, blogLink, imageUrl, slogan, content = "";
             for (var o in e) {
