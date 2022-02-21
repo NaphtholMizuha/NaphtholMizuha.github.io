@@ -10835,6 +10835,9 @@ article.article .content h5 {
   font-size: 1em;
   font-weight: bold;
 }
+article.article .content MathJax {
+  font-size: 1.5em;
+}
 article.article .content pre {
   font-size: 0.85em;
   font-weight: lighter;
