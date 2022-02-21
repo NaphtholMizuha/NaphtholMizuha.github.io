@@ -412,13 +412,13 @@ button,
 input,
 select,
 textarea {
-  font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+  font-family: 'Roboto Slab', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
 }
 code,
 pre {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  font-family: 'Noto Sans Mono', monospace, 'Microsoft YaHei';
+  font-family: 'JetBrains Mono', monospace;
 }
 body {
   color: #4a4a4a;
@@ -1064,19 +1064,19 @@ a.has-text-grey-lightest:focus {
   font-weight: 700 !important;
 }
 .is-family-primary {
-  font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif !important;
+  font-family: 'Roboto Slab', 'Noto Sans SC', 'Microsoft YaHei', sans-serif !important;
 }
 .is-family-secondary {
-  font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif !important;
+  font-family: 'Roboto Slab', 'Noto Sans SC', 'Microsoft YaHei', sans-serif !important;
 }
 .is-family-sans-serif {
-  font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif !important;
+  font-family: 'Roboto Slab', 'Noto Sans SC', 'Microsoft YaHei', sans-serif !important;
 }
 .is-family-monospace {
   font-family: monospace !important;
 }
 .is-family-code {
-  font-family: 'Noto Sans Mono', monospace, 'Microsoft YaHei' !important;
+  font-family: 'JetBrains Mono', monospace !important;
 }
 .is-block {
   display: block !important;
@@ -10813,25 +10813,31 @@ article.article .article-meta {
 }
 article.article .content {
   word-wrap: break-word;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 article.article .content h1 {
   font-size: 1.75em;
+  font-weight: 800;
 }
 article.article .content h2 {
   font-size: 1.5em;
+  font-weight: 800;
 }
 article.article .content h3 {
   font-size: 1.25em;
+  font-weight: bold;
 }
 article.article .content h4 {
   font-size: 1.125em;
+  font-weight: bold;
 }
 article.article .content h5 {
   font-size: 1em;
+  font-weight: bold;
 }
 article.article .content pre {
   font-size: 0.85em;
+  font-weight: lighter;
 }
 article.article .content code {
   padding: 0;
@@ -11290,7 +11296,7 @@ figure.highlight figcaption * {
 }
 figure.highlight figcaption span {
   font-weight: 500;
-  font-family: 'Noto Sans Mono', monospace, 'Microsoft YaHei';
+  font-family: 'JetBrains Mono', monospace;
 }
 figure.highlight figcaption .level-left *:not(:last-child) {
   margin-right: 0.5em;
@@ -11585,7 +11591,7 @@ figure.highlight .section {
 .cc-window,
 .cc-revoke {
   font-size: 1.1rem !important;
-  font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif !important;
+  font-family: 'Roboto Slab', 'Noto Sans SC', 'Microsoft YaHei', sans-serif !important;
 }
 .cc-window {
   color: #4a4a4a !important;
