@@ -1,31 +1,31 @@
 ---
 hide:
+  - navigation
   - footer
 ---
 
-# Welcome to MkDocs
+# 欢迎来到萘酚米兹哈个人博客
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Math
-
-with \(a + b \ne c\), so that
-
-\[
-\varphi(h) = 0
-\]
+观赏[管理学专业](https://baike.baidu.com/item/保密管理/216942)的 CS 日常！
 
 
-## Commands
 
-* `mkdocs new [dir-name]` - **Create** a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+!!! tip "个人名片"
+    ![Image](https://tva1.sinaimg.cn/large/e6c9d24ely1h5iaye1f8wj20u00u0jt6.jpg){width="100", align=left}
 
-## Project layout
+    - 邮箱: <naphthol@foxmail.com>, <naphtholmizuha@outlook.com>
+    - QQ: 2135174176
+    - Bilibili: [萘酚みずは](https://space.bilibili.com/11601237)
+    - GitHub: [NaphtholMizuha](https://github.com/NaphtholMizuha)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+
+## 编程语言
+
+- C/C++
+- Golang
+- Rust
+- Typescript/React
+- Python
+## 组织
+
+- [Matrix](https://matrix.sysu.edu.cn/recruit/2021.pdf)

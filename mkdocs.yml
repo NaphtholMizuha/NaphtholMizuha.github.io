@@ -5,7 +5,6 @@ nav:
   - 主页: index.md
   - 目录: toc.md
   - 标签: tags.md
-  - 关于: about.md
   - 友情链接: friends.md
 
 theme:
@@ -18,7 +17,7 @@ theme:
     - navigation.tabs
     - navigation.tracking
     - navigation.top
-    - toc.integrate
+    - navigation.sections
   
   icon:
     admonition:
@@ -46,6 +45,7 @@ extra:
       name: 我的GitHub主页
 
 plugins:
+  - glightbox
   - search
   - blogging:
       locale: zh_CN
@@ -70,11 +70,13 @@ markdown_extensions:
       generic: true
   - toc:
       permalink: true
-
+  - attr_list
+  - md_in_html
 extra_css:
   - stylesheets/naph.css
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js
   - javascripts/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.js
 copyright: Copyright &copy; 2022 Naphthol Mizuha

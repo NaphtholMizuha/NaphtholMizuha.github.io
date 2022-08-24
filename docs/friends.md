@@ -1,6 +1,7 @@
 ---
 exclude_from_blog: true
 hide:
+    - navigation
     - footer
 ---
 # 友情链接
