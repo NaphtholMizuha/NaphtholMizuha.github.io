@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'HarmonyOS Sans SC';
-    src: url('../fonts/HarmonyOS_Sans_SC_Regular.ttf');
+    src: url('../fonts/HarmonyOS_Sans_SC_Regular.woff2');
     font-weight: normal;
 }
 
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'HarmonyOS Sans SC';
-    src: url('../fonts/HarmonyOS_Sans_SC_Bold.ttf');
+    src: url('../fonts/HarmonyOS_Sans_SC_Bold.woff2');
     font-weight: bold;
 }
 

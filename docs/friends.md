@@ -1,3 +1,8 @@
+---
+exclude_from_blog: true
+hide:
+    - footer
+---
 # 友情链接
 
 ## [Hanmur](http://hanmur.cn)

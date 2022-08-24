@@ -1,5 +1,9 @@
-# 标签
+---
+exclude_from_blog: true
+title: 标签
+hide:
+    - navigation
+    - footer
+---
 
-通过标签寻找博文
-
-[TAGS]
+{{ tag_content }}
