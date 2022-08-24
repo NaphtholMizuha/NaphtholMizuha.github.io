@@ -74,9 +74,8 @@ markdown_extensions:
   - md_in_html
 extra_css:
   - stylesheets/naph.css
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js
-  - javascripts/katex.js
-  - https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+  - javascripts/mathjax.js
 copyright: Copyright &copy; 2022 Naphthol Mizuha
