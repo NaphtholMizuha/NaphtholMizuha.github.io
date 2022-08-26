@@ -16,10 +16,11 @@ hide:
 
     ![Image](assets/naphthol-with-bg.png){width="100", align=left}
 
-    - 邮箱: <naphthol@foxmail.com>, <naphtholmizuha@outlook.com>
-    - QQ: 2135174176
-    - Bilibili: [萘酚みずは](https://space.bilibili.com/11601237)
-    - GitHub: [NaphtholMizuha](https://github.com/NaphtholMizuha)
+    - :material-email: 邮箱: <naphthol@foxmail.com>, <naphtholmizuha@outlook.com>
+    - :fontawesome-brands-qq: QQ: 2135174176
+    - :fontawesome-brands-bilibili: Bilibili: [萘酚みずは](https://space.bilibili.com/11601237)
+    - :fontawesome-brands-github: GitHub: [NaphtholMizuha](https://github.com/NaphtholMizuha)
+    - :fontawesome-brands-telegram: Telegram: [NaphtholMizuha](https://t.me/NaphtholMizuha)
 
 
 ## 编程语言
