@@ -46,7 +46,7 @@ plugins:
   - blogging:
       locale: zh_CN
       dirs:
-        - blog
+        - 博客
       title:
       template: override/custom-blog.html
       features:
