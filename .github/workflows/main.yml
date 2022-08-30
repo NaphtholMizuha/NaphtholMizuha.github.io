@@ -1,8 +1,8 @@
-name: ci 
+name: page deploy
 on:
   push:
     branches:
-      - mk-docs 
+      - mkdocs 
 
 jobs:
   deploy:
