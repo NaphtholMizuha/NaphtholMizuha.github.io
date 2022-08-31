@@ -29,11 +29,7 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
-extra:
-  consent:
-    title: Cookie consent
-    description: >-
-      我们使用cookies识别您的访问记录以及偏好
+      
   social:
     -
       icon: fontawesome/brands/github
@@ -46,7 +42,8 @@ plugins:
   - blogging:
       locale: zh_CN
       dirs:
-        - 博客
+        - Blog
+        - 课程笔记
       title:
       template: override/custom-blog.html
       features:
