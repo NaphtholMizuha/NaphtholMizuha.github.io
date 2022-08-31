@@ -9,7 +9,7 @@ hide:
 ## [Hanmur](http://hanmur.cn)
 
 !!! tip "个人名片"
-    ![Image](https://hanmur.cn/medias/avatar.png){width="100", align=left}
+    ![Image](https://avatars.githubusercontent.com/u/73321642?v=4){width="100", align=left}
 
     - 同学之一
     - 产品🐶、Go 后端使用者
